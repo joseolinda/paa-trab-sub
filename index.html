@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Submissãoo 01 - PAA</title>
+
+    <!-- MATHJAX 3 (através da CDN) -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- MATHJAX 3 (salvo no computador) -->
+    <!-- <script type="text/javascript" async src="../../../Aplicativos/MathJax-master/es5/tex-mml-chtml.js" async></script> -->
+    <style>
+        .resp {
+            font-size: 15px;
+            margin-top: 16px!important;
+            margin-bottom: 16px!important;
+            border: 1px solid #ccc!important;
+            width: auto;
+            background-color: #fff;
+            padding: 8px 12px;
+            border-left: 4px solid #c0d9d9 !important;
+            word-wrap: break-word;
+            font-family: Consolas, "courier new";
+            font-size: 16px;
+            color: #253759;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- importar pacotes -->
+    <section>
+        <h1>Escolha do problema e algoritmos</h1>           
+    </section>
+    <hr>
+    <section>
+        <h2>Definição do problema:</h2>           
+        <p>
+            Dada duas matrizes inteiras quadrada X e Y de ordem \(2^n \times 2^n \), onde \(n \gt 1\) e \(n \in \mathbb{N}\), calcular o produto \( X \times Y) \).
+            <br><br>
+            <strong>Entrada: </strong>
+            <span>uma matriz \( X(2^n \times 2^n) \) e uma matriz  \( Y(2^n \times 2^n) \).</span>
+            <br>
+            <strong>Saída: </strong>
+            <span>Uma matriz \( Z(2^n \times 2^n) \), que será produto das matrizes \( X \times Y \) .</span>
+        </p>
+    </section>     
+    <hr>
+    <section>
+        <h2>Escolha dos algoritmos:</h2>
+        <hr style="width:90%;">          
+        <p>
+            <strong>Algoritmo 01: </strong>
+            Força bruta
+        </p>
+        <p>
+            <strong>Entrada: </strong>
+            <span>uma matriz \( X(2^n \times 2^n) \) e uma matriz  \( Y(2^n \times 2^n) \).</span>
+            <br>
+            <strong>Saída: </strong>
+            <span>Uma matriz \( Z(2^n \times 2^n) \), que será produto das matrizes \( X \times Y \) .</span>
+            <br><br>
+            <strong>Descrição do algoritmo: </strong>
+            <span>o produto das matrizes \( X = (X_{ij})_{2^n \times 2^n} \) e \( Y = (Y_{ij})_{2^n \times 2^n} \) 
+                é a matriz \( Z = (Z_{ij})_{2^n \times 2^n} \), em que cada elemento \( Z_{ij} \) é obtido 
+                por meio da soma dos produtos dos elementos correspondentes 
+                da i-ésima linha de X pelos elementos da j-ésima coluna de Y.
+            </span>
+            <br>
+        </p>
+
+        <hr style="width:90%;">          
+        <p>
+            <strong>Algoritmo 02: </strong>
+            Strassen
+        </p>
+        <p>
+            <strong>Entrada: </strong>
+            <span>uma matriz \( X(2^n \times 2^n) \) e uma matriz  \( Y(2^n \times 2^n) \).</span>
+            <br>
+            <strong>Saída: </strong>
+            <span>Uma matriz \( Z(2^n \times 2^n) \), que será produto das matrizes \( X \times Y \) .</span>
+            <br><br>
+            <strong>Descrição do algoritmo: </strong>
+            <span>Para calcular o produto de (X e Y) este algoritmo utiliza 
+                a estratégia de divisão e conquista, em que ele irá dividir 
+                cada matriz (X,Y) em 4 sub matrizes quadradas, X(A,B,C,D) e Y(E,F,G,H) 
+                em que o produto de sua multiplicação seria assim a 
+                matriz Z (R,S,T,U), que irá receber o resultado 
+                com blocos do mesmo tamanho de (X e Y). 
+                A estratégia de atribuições será com 7(sete) chamdas recursivas ao algoritmo.
+
+            </span>
+            <br>
+        </p>
+    </section>  
+    
+    <hr>
+    <section>
+        <h2>Referências:</h2>
+        <ul>
+            <li><a href="https://pt.wikipedia.org/wiki/Algoritmo_de_Strassen">Algoritmo de Strassen – Wikipédia, a enciclopédia livre</a></li>
+            <li><a href="https://www.somatematica.com.br/emedio/matrizes/matrizes4.php">Multiplicação de matrizes - Só Matemática</a></li>
+            <li><a href="https://www.ime.usp.br/~cris/aulas/13_1_338/slides/aula5.pdf">USP - Análise de Algoritmos - Sides</a></li>
+            <li><a href="https://link.springer.com/content/pdf/10.1007%2F978-1-84800-070-4.pdf">The Algorithm Design Manual - Steven S. Skiena</a></li>
+
+        </ul>
+    </section>
+
+</body>
+
+</html>
